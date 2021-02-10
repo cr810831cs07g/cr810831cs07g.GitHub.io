@@ -76,7 +76,7 @@ wmic qfe get Description,HotFixID,InstalledOn | findstr /C:"KB4346084" /C:"KB450
 
 wmic product get name,version	查看目前安裝程序
 
-# 共享目錄
+### 共享目錄
 net share
 
 wmic share get name,path,status
@@ -97,6 +97,8 @@ netsh advfirewall firewall add rule name"Allow nc" dir=out action=alow program="
 netsh advfirewall firewall add rule name="Remote Desktop" protocol=TCP dir=in localport=3398 action=allow	允許3389通過
 
 netsh advfirewall set currentprofile logging filename "C:\windows\temp\fw.log"	定義防火牆log存放位置
+
+
 
 ### 遠端服務
 REG QUERY "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /V PortNumber	查看遠端連結port(0xd3d)
