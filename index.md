@@ -1,23 +1,29 @@
 ## 後滲透筆記
 
 systeminfo	系統資訊
+
 systeminfo | findstr /B /C:"OS名稱" /C:"OS版本"	查看特定資訊
+
 wmic os get caption	查看作業系統
+
 whoami	當前使用者
+
 whoami /priv	當前使用者權限
+
 ipconfig /displaydns	DNS暫存
+
 route print	路由表
+
 arp -a	
+
 hostname	
 
---------------------------------------------
 net user	
 net user UserName	關於使用者資訊
 net localgroup administrators	本機管理者帳號
 net user /domain	網域使用者
 wmic useraccount get /all 	網域使用者詳細資訊
 net group "domain admins" /domain	網域管理者帳號
---------------------------------------------
 
 net use \SMBPATH Pa$$w0rd /u:UserName	連接SMB
 net localgroup	列出所有Group
